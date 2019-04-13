@@ -50,3 +50,14 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Temporary files
+*~
+*swp
+*swo
+
+# Archive files
+*.zip
+*.gz
+*.bz2
+*.rar
