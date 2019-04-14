@@ -41,7 +41,7 @@ static VOID PrintLastError(const PCHAR message)
 		PrintLastError(call_description);	\
 	} while (0)
 
-#elif defined(__linux__)
+#elif defined(__linux__) || defined (__APPLE__)
 
 /* error printing macro */
 #define ERR(call_description)				\
