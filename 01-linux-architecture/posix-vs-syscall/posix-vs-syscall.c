@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <fcntl.h>
+#include <sys/wait.h>
 #include <pthread.h>
 
 #include "util.h"
