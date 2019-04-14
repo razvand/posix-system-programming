@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo perf stat -e cache-misses,cache-references ./column
+sudo perf stat -e cache-misses,cache-references ./row
