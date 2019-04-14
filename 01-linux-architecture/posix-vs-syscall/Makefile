@@ -8,9 +8,10 @@ all: posix-vs-syscall
 
 posix-vs-syscall: posix-vs-syscall.o
 
-posix-vs-syscall.o: posix-vs-syscall.c
+posix-vs-syscall.o: posix-vs-syscall.c ../../util/util.h
 
 clean:
 	-rm -f *~
+	-rm -f aaa
 	-rm -f posix-vs-syscall.o posix-vs-syscall
 
