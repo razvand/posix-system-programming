@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <pthread.h>
+
+#include "util.h"
+
+#define NUM_ROUNDS		100
+#define NUM_THREADS		100
+
+static void *show(void *arg)
+{
+	printf("This is thread %lu\n", pthread_self());
+
+	return NULL;
+}
+
+int main(void)
+{
+	pthread_t ths[NUM_THREADS];
+	size_t i, j;
+
+	for (i = 0; i < NUM_ROUNDS; i++) {
+		for (j = 0; j < NUM_THREADS; j++)
+			DIE(pthread_create(&ths[j], NULL, &show, NULL) != 0, "pthread_create");
+
+		for (j = 0; j < NUM_THREADS; j++)
+			DIE(pthread_join(ths[j], NULL), "pthread_join");
+	}
+
+	return 0;
+}
