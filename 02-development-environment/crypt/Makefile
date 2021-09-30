@@ -4,5 +4,10 @@ CFLAGS = -Wall -g
 
 all: my-crypt
 
+my-crypt: my-crypt.o
+
+my-crypt.o: my-crypt.c
+
 clean:
-	-rm -f my-crypt *.o *~
+	-rm -f *~
+	-rm -f my-crypt my-crypt.o
