@@ -1,8 +1,14 @@
 #!/bin/bash
 
-sudo nice -n -20 /usr/bin/time -v ./cpu 2> pri-20-v1.txt &
-sudo nice -n -20 /usr/bin/time -v ./cpu 2> pri-20-v2.txt &
-sudo /usr/bin/time -v ./cpu 2> pri0-v1.txt &
-sudo /usr/bin/time -v ./cpu 2> pri0-v2.txt &
-sudo nice -n 19 /usr/bin/time -v ./cpu 2> pri+19-v1.txt &
-sudo nice -n 19 /usr/bin/time -v ./cpu 2> pri+19-v2.txt &
+sudo /usr/bin/nice -n -20 /usr/bin/time -v ./cpu 2> pri-20-v1.txt &
+sudo /usr/bin/nice -n -20 /usr/bin/time -v ./cpu 2> pri-20-v2.txt &
+sudo /usr/bin/nice -n -20 /usr/bin/time -v ./cpu 2> pri-20-v3.txt &
+sudo /usr/bin/nice -n -20 /usr/bin/time -v ./cpu 2> pri-20-v4.txt &
+/usr/bin/time -v ./cpu 2> pri0-v1.txt &
+/usr/bin/time -v ./cpu 2> pri0-v2.txt &
+/usr/bin/time -v ./cpu 2> pri0-v3.txt &
+/usr/bin/time -v ./cpu 2> pri0-v4.txt &
+/usr/bin/nice -n 19 /usr/bin/time -v ./cpu 2> pri+19-v1.txt &
+/usr/bin/nice -n 19 /usr/bin/time -v ./cpu 2> pri+19-v2.txt &
+/usr/bin/nice -n 19 /usr/bin/time -v ./cpu 2> pri+19-v3.txt &
+/usr/bin/nice -n 19 /usr/bin/time -v ./cpu 2> pri+19-v4.txt &

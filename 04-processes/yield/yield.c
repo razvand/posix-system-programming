@@ -5,7 +5,7 @@
 #include <sched.h>
 #include <time.h>
 
-#include "utils.h"
+#include "util.h"
 
 #define diff_us(ta, tb)		\
 	(((ta).tv_sec - (tb).tv_sec) * 1000 * 1000 + \

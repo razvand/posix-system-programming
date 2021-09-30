@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#include "utils.h"
+#include "util.h"
 
 int main(void)
 {
