@@ -15,6 +15,7 @@ int main(void)
 		sleep(1);
 	}
 	printf("\n");
+	printf("stdout bufsize: %d\n", __fbufsize(stdout));
 
 	f = fopen("aaa", "w");
 	DIE(f == NULL, "fopen");
@@ -24,6 +25,7 @@ int main(void)
 		fprintf(f, "\n");
 		sleep(1);
 	}
+	printf("file bufsize: %d\n", __fbufsize(f));
 	fflush(f);
 
 	fclose(f);
