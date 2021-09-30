@@ -25,6 +25,7 @@ int main(void)
 		break;
 
 	default:	/* parent process */
+		printf("  [parent] Child process created. PID is %d.\n", pid);
 		break;
 	}
 
